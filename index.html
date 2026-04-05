@@ -14,18 +14,17 @@
         <h1>Jokenpo</h1>
 
         <div class="buttons">
-            <button id="rock">&#x1F44A;</button>
-            <button id="paper">&#x1F590;</button>
-            <button id="scissors">&#x270C;</button>
+            <button id="rock" onclick="verifyWinner('rock')">&#x1F44A;</button>
+            <button id="paper" onclick="verifyWinner('paper')">&#x1F590;</button>
+            <button id="scissors" onclick="verifyWinner('scissors')">&#x270C;</button>
 
         </div>
 
-        <p>Your score: <span id="player-score">0</span></p>
-        <p>Computer score: <span id="computer-score">0</span></p>
-        <p id="result"></p>
+        <p>&#x1F935; score: <span id="player-score">0</span></p>
+        <p>&#x1F4BB; score: <span id="computer-score">0</span></p>
+        <p id="result-text"></p>
 
     </div>
-
 </body>
-
+    <script src="scripts.js"></script>
 </html>
