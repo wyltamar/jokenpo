@@ -1,0 +1,75 @@
+*{
+    margin: 0; /* Remove as margens externas e preenchimentos padrão */
+    padding: 0; /* Remove as margens internas e preenchimentos padrão */
+    box-sizing: border-box; /* Adiciona o box-sizing para facilitar o controle de layout */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: url(./jogo.jpeg) no-repeat center center fixed; /* Define a imagem de fundo, centralizada e fixa */ 
+    background-size: cover; /* Faz com que a imagem cubra todo o corpo */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */  
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade para destacar o conteúdo */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para dar profundidade */
+}
+
+.buttons{
+    display: flex; /* Usa flexbox para organizar os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 40px; /* Espaçamento entre os botões */
+    margin: 30px 0; /* Margem superior e inferior para separar os botões do restante do conteúdo */
+}
+
+button{
+
+    padding: 10px ; /* Espaçamento interno do botão */
+    font-size: 50px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: background-color 0.5s ease-in-out; /* Transição suave para a cor de fundo */
+    
+}
+
+button:hover{
+    opacity: 0.8; /* Reduz a opacidade ao passar o mouse para dar um efeito visual */
+}
+
+button:active{
+    transform: scale(0.95); /* Reduz ligeiramente o tamanho do botão ao clicar para dar um feedback visual */
+}
+
+#rock{
+    background-color: #1d8b07; /* Cor de fundo para o botão Pedra */
+}
+
+#paper{
+    background-color: #050d52; /* Cor de fundo para o botão Papel */
+}
+
+#scissors{
+    background-color: #535252; /* Cor de fundo para o botão Tesoura */
+}
+
+p{
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-size: 24px; /* Tamanho da fonte para o resultado */
+    margin-bottom: 10px; /* Margem inferior para separar o resultado do restante do conteúdo */
+}
+
+#player-score {
+    color: rgb(20, 11, 102);
+}
+
+#computer-score {
+    color: rgb(196, 29, 29);
+}
