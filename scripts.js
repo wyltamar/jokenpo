@@ -6,6 +6,12 @@ const computerScore = document.getElementById('computer-score')
 let playerPoints = 0;
 let computerPoints = 0;
 
+const GAME_OPTIONS = {
+   ROCK: 'rock',
+   PAPER: 'paper',
+   SCISSORS: 'scissors'
+}
+
 
 const humanChoice = (choiceHuman) => {
     return choiceHuman  
@@ -13,7 +19,7 @@ const humanChoice = (choiceHuman) => {
 
 const computerChoice = () => {
 
-    const choices = ['rock','paper','scissors'];
+    const choices = [GAME_OPTIONS.ROCK,GAME_OPTIONS.PAPER ,GAME_OPTIONS.SCISSORS];
     const indexRamdom = Math.floor(Math.random() * choices.length);
     return choices[indexRamdom];
 }
@@ -29,9 +35,9 @@ const verifyWinner = (choiceHuman)=>{
      if(human === computer){
         result.innerHTML = "It's tied."
      }else if(
-        human === 'rock' && computer === 'scissors' || 
-        human === 'scissors' && computer == 'paper' ||
-        human === 'paper' && computer == 'rock'
+        human === GAME_OPTIONS.ROCK && computer === GAME_OPTIONS.SCISSORS || 
+        human === GAME_OPTIONS.SCISSORS && computer == GAME_OPTIONS.PAPER ||
+        human === GAME_OPTIONS.PAPER && computer == GAME_OPTIONS.ROCK
      ){
         playerPoints++
         playerScore.textContent = playerPoints
